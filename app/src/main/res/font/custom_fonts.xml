@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <font weight="100" style="normal" android:font="@font/robotothin"/>
+    <font weight="300" style="normal" android:font="@font/robotolight"/>
+    <font weight="400" style="normal" android:font="@font/robotoregular" />
+    <font weight="500" style="normal" android:font="@font/robotomedium" />
+    <font weight="900" style="normal" android:font="@font/robotoblack" />
+    <font weight="700" style="normal" android:font="@font/robotobold" />
+</font-family>

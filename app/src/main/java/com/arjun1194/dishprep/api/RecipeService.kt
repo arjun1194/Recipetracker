@@ -5,6 +5,7 @@ import com.arjun1194.dishprep.BuildConfig
 import com.arjun1194.dishprep.data.model.SearchResponse
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
+import okhttp3.Response
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,11 +34,12 @@ interface RecipeService {
                 it.proceed(newRequest)
             }
 
-
             val client = OkHttpClient.Builder()
                 .addInterceptor(logger)
                 .addInterceptor(authInterceptor)
                 .build()
+
+
 
             return Retrofit.Builder()
                 .baseUrl("https://api.spoonacular.com/recipes/")

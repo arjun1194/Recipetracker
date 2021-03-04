@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DishPrep</string>
+    <string name="caption_search">Search through hundreds of thousands of recipes using advanced filtering and ranking. You can find a recipe by putting a cuisine type, a diet type or a keyword</string>
 </resources>
