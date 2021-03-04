@@ -10,10 +10,10 @@ import javax.inject.Inject
 class RecipeRepository @Inject constructor(
     private val recipeService: RecipeService
 ){
-        fun getSearchResponse(query: String): Flow<DataResponse<SearchResponse>> {
+        fun getSearchResponse(query: String,cuisine:String,diet:String): Flow<DataResponse<SearchResponse>> {
             return flow<DataResponse<SearchResponse>> {
                 try {
-                    val networkResponse = recipeService.searchRecipe(query)
+                    val networkResponse = recipeService.searchRecipe(query,cuisine,diet)
                     emit(DataResponse.Success(networkResponse))
                 } catch (e: Exception) {
                     emit(DataResponse.Error(e))

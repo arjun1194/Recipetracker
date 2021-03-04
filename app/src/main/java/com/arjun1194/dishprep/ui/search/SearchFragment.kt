@@ -14,7 +14,7 @@ import com.arjun1194.dishprep.utils.toast
 class SearchFragment : Fragment() {
 
     lateinit var binding: FragmentSearchBinding
-    private val viewModel: SearchViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,7 +34,6 @@ class SearchFragment : Fragment() {
         }
         binding.dietSpinner.run {
             setItems(FormData.dietList)
-            selectItemByIndex(0)
         }
         binding.submitBtn.setOnClickListener {
             val query = binding.searchEditText.text.toString().trim()
@@ -56,6 +55,6 @@ class SearchFragment : Fragment() {
         FormData.cuisineList[binding.cuisineSpinner.selectedIndex]
 
     private fun selectedDiet(): String =
-        if (binding.dietSpinner.selectedIndex == -1) FormData.dietList[binding.dietSpinner.selectedIndex] else ""
+        if (binding.dietSpinner.selectedIndex == -1) "" else FormData.dietList[binding.dietSpinner.selectedIndex]
 
 }

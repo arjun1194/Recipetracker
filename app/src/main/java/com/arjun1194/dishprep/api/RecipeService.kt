@@ -17,6 +17,8 @@ interface RecipeService {
     @GET("complexSearch")
     suspend fun searchRecipe(
         @Query("query") query: String,
+        @Query("cuisine") cuisine: String,
+        @Query("diet") diet: String,
         @Query("apiKey") apiKey: String = BuildConfig.API_KEY
     ): SearchResponse
 
